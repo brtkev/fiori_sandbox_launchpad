@@ -1,0 +1,41 @@
+{
+  "name": "@capire/bookshop",
+  "version": "1.0.0",
+  "description": "A simple self-contained bookshop service.",
+  "files": [
+    "app",
+    "srv",
+    "db",
+    "index.cds",
+    "index.js"
+  ],
+  "dependencies": {
+    "@sap/cds": ">=5.9",
+    "express": "^4.17.1",
+    "passport": ">=0.4.1"
+  },
+  "scripts": {
+    "genres": "cds serve test/genres.cds",
+    "start": "cds run",
+    "watch": "cds watch",
+    "watch-project1": "cds watch --open project1/webapp/index.html?sap-ui-xx-viewCache=false",
+    "watch-admin-service": "cds watch --open admin-service/webapp/index.html?sap-ui-xx-viewCache=false",
+    "watch-list-report-object-page": "cds watch --open list-report-object-page/webapp/index.html?sap-ui-xx-viewCache=false",
+    "watch-sample2": "cds watch --open sample2/webapp/index.html?sap-ui-xx-viewCache=false"
+  },
+  "cds": {
+    "requires": {
+      "db": "sql"
+    }
+  },
+  "sapux": [
+    "app/project1",
+    "app/admin-service",
+    "app/list-report-object-page",
+    "app/sample2"
+  ],
+  "devDependencies": {
+    "@sap/ux-specification": "^1.108.4",
+    "cds-launchpad-plugin": "^1.0.8"
+  }
+}
