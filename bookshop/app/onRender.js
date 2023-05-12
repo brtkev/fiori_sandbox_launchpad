@@ -8,10 +8,12 @@ const handler = () => {
         //if render do something... 
         ul.childNodes[0].remove();
 
-        //stop the interval
+        //stop the interval 
         clearInterval(intervalID)
     }
 }
 
 //Start the inteval, run the handler until stopped
-intervalID = setInterval(handler, 1000);
+function onRender(){
+    intervalID = setInterval(handler, 500);
+}

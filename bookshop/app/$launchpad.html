@@ -14,7 +14,7 @@
 			}
 		};
 	</script>
-
+	<script src="onRender.js"></script>
 	<script id="sap-ushell-bootstrap" src="https://ui5.sap.com//test-resources/sap/ushell/bootstrap/sandbox.js"></script>
 	<script id="sap-ui-bootstrap" src="https://ui5.sap.com//resources/sap-ui-core.js"
 			data-sap-ui-libs="sap.m, sap.ushell, sap.collaboration, sap.ui.layout"
@@ -23,11 +23,35 @@
 			data-sap-ui-frameOptions="allow"
 	></script>
 	<script>
-		sap.ui.getCore().attachInit( ()=> sap.ushell.Container.createRenderer().placeAt("content"))
+		sap.ui.getCore().attachInit( ()=> {
+			sap.ushell.Container.attachRendererCreatedEvent( (render) => {
+				console.log("Hello world", render)
+				console.log(render.mParameters.renderer) 
+				// onRender();
+			})
+
+			console.log("create render");
+			sap.ushell.Container.createRenderer(bAsync = true)
+			.then( (render) => {
+				// render es control tengo entendido
+				//testin
+				// console.log(render)
+				// console.log(render.oModels)
+				// console.log(render.mAggregations)
+				// console.log(render.mAssociations)
+				//testing
+
+				render.onAfterRendering = (e) => {
+					console.log("after rendering")
+					onRender();
+				}
+				render.placeAt("content");
+			});
+		})
 	</script>
 
 </head>
 <body class="sapUiBody" id="content">
-	<script src="onRender.js"></script>
+	
 </body>
 </html>
