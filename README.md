@@ -1,10 +1,6 @@
-# fiori_sandbox_launchpad
-Evaluacion de la herramienta
+# Running the Sample
 
-comandos para correr el servicio:
-
-cd bookshop/
-
-npm i
-
-cds w
+```sh
+npm install
+cds watch
+```
