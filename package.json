@@ -18,7 +18,8 @@
     "genres": "cds serve test/genres.cds",
     "start": "cds run",
     "watch": "cds watch",
-    "watch-catalog-service": "cds watch --open catalog-service/webapp/index.html?sap-ui-xx-viewCache=false"
+    "watch-catalog-service": "cds watch --open catalog-service/webapp/index.html?sap-ui-xx-viewCache=false",
+    "watch-currencies": "cds watch --open currencies/webapp/index.html?sap-ui-xx-viewCache=false"
   },
   "cds": {
     "requires": {
@@ -26,7 +27,8 @@
     }
   },
   "sapux": [
-    "app/catalog-service"
+    "app/catalog-service",
+    "app/currencies"
   ],
   "devDependencies": {
     "@sap/ux-specification": "^1.108.5"

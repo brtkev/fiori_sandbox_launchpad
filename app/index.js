@@ -1,6 +1,6 @@
 console.log("index.js");
 let intervalID;
-let apps = ["catalog-service"]
+let apps = ["catalog-service", "currencies"]
 
 //handler after rendering
 const handler = () => {
@@ -43,7 +43,8 @@ const handler = () => {
             }
 
         }
-
+        //removes the hider
+        document.getElementById('hider').style.display = "none";
         //stops the interval
         clearInterval(intervalID);
     }

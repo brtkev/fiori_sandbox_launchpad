@@ -21,6 +21,14 @@
                     }
                   },
                   {
+                    "id": "currencies",
+                    "tileType": "sap.ushell.ui.tile.StaticTile",
+                    "properties": {
+                      "title": "Currencies",
+                      "targetURL": "currencies/webapp"
+                    }
+                  },
+                  {
                     "id": "BrowseBooks",
                     "tileType": "sap.ushell.ui.tile.StaticTile",
                     "properties": {
